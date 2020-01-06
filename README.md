@@ -2,11 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to Start
 
-To run the application, type:
+To run the application, type "npm start" in the console log.
 
-### `npm start`
-
-This will run the app on "localhost:3000"
+This will run the app on "localhost:3000".
 
 ### `What the App does`
 
