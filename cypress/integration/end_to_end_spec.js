@@ -1,6 +1,6 @@
 describe("End to End Test", function() {
-  cy.visit("http://localhost:3000");
   it("Creates a task", function() {
+    cy.visit("http://localhost:3000");
     cy.get(".task").should("have.length", 0);
     //types in the name of the task
     cy.get(".type-task")
