@@ -4,10 +4,11 @@ import "./App.css";
 function App(props) {
   const [list, setList] = useState([]);
 
-  const addItem = item => {
+  const addTask = task => {
     let listClone = [...list];
-    listClone.push({ title: item, completed: false });
+    listClone.push({ title: task, completed: false });
     setList(listClone);
+    document.getElementById("type").value = "";
   };
 
   const doneTask = id => {
@@ -43,10 +44,10 @@ function App(props) {
   };
 
   let listDOM = [];
-  list.forEach((item, index) => {
+  list.forEach((task, index) => {
     listDOM.push(
       <li class="task" id={`task${index}`}>
-        {item.title}{" "}
+        {task.title}{" "}
         <button id={`done${index}`} onClick={event => doneTask(index)}>
           done
         </button>
@@ -72,11 +73,12 @@ function App(props) {
           onSubmit={event => {
             event.preventDefault();
             let data = new FormData(event.target);
-            addItem(data.get("taskTitle"));
+            addTask(data.get("taskTitle"));
           }}
         >
           <input
             type="text"
+            id="type"
             class="type-task"
             placeholder="Name your Task here..."
             name="taskTitle"
