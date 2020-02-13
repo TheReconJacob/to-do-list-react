@@ -6,6 +6,6 @@ import App from "../App";
 describe("Add Task Button", () => {
   it("Renders without crashing", () => {
     const AppPage = render(<App />);
-    AppPage.getByText("add");
+    AppPage.getByText("Add");
   });
 });
