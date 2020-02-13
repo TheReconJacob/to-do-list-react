@@ -45,7 +45,7 @@ function App(props) {
   let listDOM = [];
   list.forEach((item, index) => {
     listDOM.push(
-      <li id={`task${index}`}>
+      <li class="task" id={`task${index}`}>
         {item.title}{" "}
         <button id={`done${index}`} onClick={event => doneTask(index)}>
           done
